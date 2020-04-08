@@ -17,11 +17,7 @@ app.get("/api", (req, res) => {
       axios.get("https://api.mybitx.com/api/1/ticker?pair=XBTZAR"),
     ])
     .then((resArr) => {
-      var response = {
-        ...resArr[0].data,
-        ...resArr[1].data,
-        ...resArr[2].data,
-      };
+      var response = [resArr[0].data, resArr[1].data, resArr[2].data];
 
       res.send(response);
     });
@@ -29,4 +25,4 @@ app.get("/api", (req, res) => {
 
 app.get("");
 
-app.listen("80");
+app.listen("8080");
