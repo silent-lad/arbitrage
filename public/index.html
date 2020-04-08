@@ -28,7 +28,7 @@
           <tr>
             <td data-label="Account">{{data[2].bid}}</td>
             <td data-label="Due Date">{{data[2].ask}}</td>
-            <td data-label="Account">{{data[2].timestamp/1000}}</td>
+            <td data-label="Account">{{Math.floor(data[2].timestamp/1000)}}</td>
             <td data-label="Amount">{{data[2].last_trade}}</td>
             <td data-label="Period">{{data[2].rolling_24_hour_volume}}</td>
             <td data-label="Period">
